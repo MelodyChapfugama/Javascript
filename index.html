@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <body>
+    <div id="demo">
+      <p> one </p>
+    </div>
+    <script>
+      function preBakeFunction(){
+        document.getElementById("demo").innerHTML = "i changed on demand";
+      }
+      function bakeFunction(){
+        window.alert("baking in progress")
+      }
+    </script>
+
+    <button  type="button" onclick="preBakeFunction()"> Bake it </button>
+    <button  type="button" onclick="bakeFunction()"> Bake2 </button>
+  </body>
+</html>
