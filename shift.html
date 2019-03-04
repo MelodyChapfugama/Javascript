@@ -3,8 +3,10 @@
 
     <script>
 
-      var array = cars;
+
       var cars=["BMW" , "benz" , "toyota"];
+      cars[1]="altezza";
+      cars.splice(1, 0, "altezza", "ferrari");
       document.write("there are" + cars.length + "cars....." + cars.toString() + "<br/>" );
 
       cars.push("land rover");
@@ -20,6 +22,9 @@
       cars.shift();
       cars.shift();
       document.write("there are" + cars.length + "cars....." + cars.toString() + "<br/>");
+
+      cars[1]="altezza";
+
 
 
     </script>
