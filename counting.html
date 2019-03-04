@@ -1,6 +1,6 @@
 <html>
   <body>
-
+<p id="demo"></p>
 
 <script>
 
@@ -8,8 +8,13 @@ var array = things;
 var things = [23 , "cars" , "harvey" , 11];
 things.push("twelve");
 
+var array = cars;
+var cars=["BMW" , "benz" , "toyota"];
+document.write("there are" + cars.length + "cars....." + cars.toStrings());
 
-document.write("<li>"+things[2]+ "</li>" + "<li>" + "has" + "</li>" +"<li>" + things[4]+"</li>" + "<li>" + things[1] +"</li>");
+
+//document.write("<li>"+things[2]+ "</li>" + "<li>" + "has" + "</li>" +"<li>" + things[4]+"</li>" + "<li>" + things[1] +"</li>");
+document.getElementById("demo").innerHTML = things.toStrings();
 
 </script>
 </body>
