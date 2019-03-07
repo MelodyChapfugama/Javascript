@@ -1,4 +1,5 @@
 var days = ["mon", "tue", "wed"];
+
   if (days[0]=="mon"){
     document.getElementById("demo").innerHTML = "hey i found monday";
   } else {
