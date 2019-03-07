@@ -10,8 +10,14 @@
   });
 
 $(document).ready(function(){
-  $("button").click(function(){
+  $("button.hide").click(function(){
     $(".weAreOne").hide();
+   });
+});
+
+$(document).ready(function(){
+  $("button.show").click(function(){
+    $(".weAreOne, .me").show();
    });
 });
 
@@ -24,11 +30,12 @@ $(document).ready(function(){
 <p class= "weAreOne"> hello, i am yvonne and i am dirty minded</p>
 
 <ul>
-  <li> rumbi would be a good girl for tau</li>
+  <li class="me"> rumbi would be a good girl for tau</li>
   <li>vimbai and tatenda were meant to be</li>
   <li style ="color:blue">tricia only dates guys who drive mercs</li>
 <p>
-  <button>disappear</button>
+  <button class = " hide">hide</button>
+  <button class = "show">show</button>
 </p>
 
 </ul>
