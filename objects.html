@@ -3,11 +3,54 @@
   <head>
 
     <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+      p {
+        display:none;
+      }
+      .demo{
+        color:green;
+        font-weight: bold;
+        font-style: italic;
+        background-color: black;
+      }
+      .demo1{
+        color:red;
+        font-weight: bold;
+        font-style: italic;
+        background-color: black;
+      }
+      .demo2{
+        color:purple;
+        font-weight: bold;
+        font-style: italic;
+        background-color: black;
+      }
+      .demo3{
+        color:blue;
+        font-weight: bold;
+        font-style: italic;
+        background-color: black;
+      }
+
+
+
+
+
+
+
+    </style>
+
   </head>
   <body>
-    <div id="demo"></div>
-    <div id="demo1"></div>
-    <script>
+   <button class="demo">show</button>
+   <button class="demo2">hard body</button>
+    <button class="demo3">corolla</button>
+    <button class="demo1">hide</button>
+
+
+<script>
 
       var corolla ={
         brand:"toyota",
@@ -30,9 +73,43 @@
        var cars =[corolla, rangeRover];
 
 
-      for (i=0; i<cars.length; i++){
-  document.write ("this is a " + cars[i].brand + " car called " + cars[i].make  +"!" +" <br>" + " it is a " + cars[i].type +" which is "  + cars[i].color + " and was released in " +  cars[i].yearOfRelease + "<br>");
-}
+    //  for (i=0; i<cars.length; i++){
+  //document.write ("this is a " + cars[i].brand + " car called " + cars[i].make  +"!" +" <br>" + " it is a " + cars[i].type +" which is "  + cars[i].color + " and was released in " +  cars[i].yearOfRelease + "<br>");
+//}
+
+var pickUp = {
+  brand:"nissan",
+  make:"hard body",
+  type:"pick up truck",
+  color:"grey",
+  yearOfRelease:2003
+};
+cars.unshift(pickUp)
+
+var i = 0;
+var text="";
+
+  do{
+    document.write("<p>" + "this is a " + cars[i].brand + " car called " + cars[i].make  +"!" +" <br>" + " it is a " + cars[i].type +" which is "  + cars[i].color + " and was released in " +  cars[i].yearOfRelease + "</p>");
+    i++;
+  }
+    while (i<cars.length);
+
+    $(document).ready(function(){
+    $("button.demo").click(function(){
+      $("p").fadeIn(1000);
+     });
+  });
+
+
+      $(document).ready(function(){
+      $("button.demo1").click(function(){
+        $("p").fadeOut(1000);
+       });
+    });
+
+
+
 
 
     </script>
